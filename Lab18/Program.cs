@@ -40,14 +40,20 @@ namespace Lab18
                     break;
 
             }
-            if (stack1.Count() = 0)
+            try
             {
-                Console.WriteLine("скобки расставлены корректно");
-            }
-            else
-            {
+                stack1.Pop();
                 Console.WriteLine("скобки расставлены не корректно");
             }
+            catch (InvalidOperationException)
+            {
+                Console.WriteLine("Стек пуст.скобки расставлены корректно");
+            }
+            
+            
+            Console.ReadKey();
+
+            
         }
     }
 }
