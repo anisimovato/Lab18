@@ -12,34 +12,37 @@ namespace Lab18
         static void Main(string[] args)
         {
             string str = "{([}])";
+
+            //char[] p = str.ToCharArray();
             Stack stack1 = new Stack();
+            foreach (var in str)
 
 
-            switch (str)
-            {
-                case "{":
-                    stack1.Push("}");
-                    break;
-                case "(":
-                    stack1.Push(")");
-                    break;
-                case "[":
-                    stack1.Push("]");
-                    break;
-                case "}":
-                    stack1.Contains("}");
-                    stack1.Pop();
-                    break;
-                case ")":
-                    stack1.Contains(")");
-                    stack1.Pop();
-                    break;
-                case "]":
-                    stack1.Contains("]");
-                    stack1.Pop();
-                    break;
-
-            }
+                switch (var)
+                {
+                    case "{":
+                        stack1.Push("}");
+                        break;
+                    case "(":
+                        stack1.Push(")");
+                        break;
+                    case "[":
+                        stack1.Push("]");
+                        break;
+                    case "}":
+                        if (stack1.Equals("}"))
+                            stack1.Pop();
+                        break;
+                    case ")":
+                        if (stack1.Equals(")"))
+                            stack1.Pop();
+                        break;
+                    case "]":
+                        if (stack1.Equals("]"))
+                            stack1.Pop();
+                        break;
+                }
+            
             try
             {
                 stack1.Pop();
@@ -49,11 +52,11 @@ namespace Lab18
             {
                 Console.WriteLine("Стек пуст.скобки расставлены корректно");
             }
-            
-            
+
+
             Console.ReadKey();
 
-            
+
         }
     }
 }
