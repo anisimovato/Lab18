@@ -12,7 +12,6 @@ namespace Lab18
         static void Main(string[] args)
         {
             string str = "{([}])";
-            // char [] b = new char[str.Length];
             Stack stack1 = new Stack();
 
 
