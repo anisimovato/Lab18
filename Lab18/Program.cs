@@ -11,7 +11,7 @@ namespace Lab18
     {
         static void Main(string[] args)
         {
-            string str = "{([}])";
+            string str = "{()[]}";
             try
             {
 
