@@ -30,19 +30,30 @@ namespace Lab18
                         stack1.Push(']');
                         break;
                     case '}':
-                        if (stack1.Equals ('}'))
+                        char i = stack1.Peek();
+                        if (i == skb)
+                        {
                             stack1.Pop();
+                        }
+                        
                         break;
                     case ')':
-                        if (stack1.Equals(')'))
+                        char j = stack1.Peek();
+                        if (j == skb)
+                        {
                             stack1.Pop();
+                        }
+                        
                         break;
                     case ']':
-                        if (stack1.Equals(']'))
+                        char n = stack1.Peek();
+                        if (n == skb)
+                        {
                             stack1.Pop();
+                        }
+                        
                         break;
                 }
-            
             try
             {
                 stack1.Pop();
@@ -52,7 +63,12 @@ namespace Lab18
             {
                 Console.WriteLine("Стек пуст.скобки расставлены корректно");
             }
-            Console.ReadKey();
+            //char k = stack1.Peek();
+            //if (k == 0)
+            //    Console.WriteLine("Скобки расставлены корректно");
+
+
+                Console.ReadKey();
         }
     }
 }
