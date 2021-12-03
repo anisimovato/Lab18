@@ -13,32 +13,32 @@ namespace Lab18
         {
             string str = "{([}])";
 
-            //char[] p = str.ToCharArray();
-            Stack stack1 = new Stack();
-            foreach (var in str)
+            
+            Stack <char>stack1 = new Stack<char>();
+            foreach ( char skb in str)
 
 
-                switch (var)
+                switch (skb)
                 {
-                    case "{":
-                        stack1.Push("}");
+                    case '{':
+                        stack1.Push('}');
                         break;
-                    case "(":
-                        stack1.Push(")");
+                    case '(':
+                        stack1.Push(')');
                         break;
-                    case "[":
-                        stack1.Push("]");
+                    case '[':
+                        stack1.Push(']');
                         break;
-                    case "}":
-                        if (stack1.Equals("}"))
+                    case '}':
+                        if (stack1.Equals ('}'))
                             stack1.Pop();
                         break;
-                    case ")":
-                        if (stack1.Equals(")"))
+                    case ')':
+                        if (stack1.Equals(')'))
                             stack1.Pop();
                         break;
-                    case "]":
-                        if (stack1.Equals("]"))
+                    case ']':
+                        if (stack1.Equals(']'))
                             stack1.Pop();
                         break;
                 }
@@ -46,17 +46,13 @@ namespace Lab18
             try
             {
                 stack1.Pop();
-                Console.WriteLine("скобки расставлены не корректно");
+                Console.WriteLine("Скобки расставлены не корректно");
             }
             catch (InvalidOperationException)
             {
                 Console.WriteLine("Стек пуст.скобки расставлены корректно");
             }
-
-
             Console.ReadKey();
-
-
         }
     }
 }
